@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+span:nth-child(1){
+    color: #808080;
+}
+span:nth-child(2){
+    color: #87ceeb;
+}
+p{
+    width: 800px;
+    display: block;
+    /* text-indent: 2; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-indent: 2rem;
+}
+p:nth-child(1){
+    margin-top: 20px;  
+}
+hr{
+    width: 800px;
+    margin: 0 auto;
+}
+.info{
+    text-align: center;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+}
