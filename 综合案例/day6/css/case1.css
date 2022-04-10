@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.black{
+    height: 40px;
+    background-color: #333333;
+}
+.pink{
+    width: 1228px;
+    height: 100px;
+    background-color: #ffc0cb;
+    margin: 0 auto;
+}
+.box{
+    width: 1228px;
+    margin: 0 auto;
+}
+.orange{
+    width: 234px;
+    height: 460px;
+    background-color: #ffa500;
+    float: left;
+}
+.blue{
+    width: 992px;
+    height: 460px;
+    background-color: #87ceeb;
+    float: left;
+}
