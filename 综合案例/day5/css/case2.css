@@ -1,0 +1,46 @@
+ /* 清除标签默认的margin和padding */
+ * {
+    margin: 0;
+    padding: 0; 
+  }
+
+  body {
+    /* 去除行高带来的默认间隙，完成精准布局 */
+    line-height: 1;
+  }
+
+  .box {
+    width: 500px;
+    height: 400px;
+    /* background-color: pink; */
+    border: 1px solid #ccc;
+    padding: 41px 30px 0;
+    /* 自动内减 */
+    box-sizing: border-box;
+  }
+
+  .box h2 {
+    height: 41px;
+    /* background-color: pink; */
+    border-bottom: 1px solid #ccc;
+    /* 自动内减 */
+    box-sizing: border-box;
+    font-size: 30px;
+  }
+
+  .box ul {
+    list-style: none;
+  }
+
+  .box ul li {
+    height: 50px;
+    padding-left: 30px;
+    border-bottom: 1px dashed #ccc;
+    line-height: 50px;
+  }
+
+  .box li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #666;
+  }
