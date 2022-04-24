@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 返回随机数
+    // Math.random(); // 返回[0,1);
+	// Math.floor(Math.random() * 10); // 返回[0,10) ,就是返回0-9的整数;
+	// Math.floor(Math.random() * 11); // 返回[0,11) , 就是返回0-10的整数;
+	// Math.floor(Math.random() * 100); // 返回[0,100) , 就是返会0-99的整数;
+	// Math.floor(Math.random() * 100) + 1; // 返回[1,100] , 就是返回1-100的整数；
+	// Math.floor(Math.random() * (200 - 50) + 50); // 返回[50,200) , 就是返回50-199的整数；
+	// Math.floor(Math.random() * (200 - 50 + 1) + 50); // 返回[50,200] , 就是返回50-200的整数；
+	// Math.floor(Math.random() * (200 - 50));
+	// function GetrndInteger(min,max) {
+	// 	return Math.floor(Math.random() * (max - min)) + min; 
+	// 	} //返回[min,max); 就是返回min-（max-1）的整数;
+	function GetrndInteger(min,max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min; 
+		} //返回[min,max); 就是返回min-max的整数;
+    // console.log(GetrndInteger(1,3));
+
+    // 猜数字小游戏
+    // var random = GetrndInteger(1,10);
+    // while (true) {
+    //     var num = parseFloat(prompt('猜猜我多大'));
+    //     if (num > random) {
+    //         alert('猜大了');
+    //     } else if (num < random) {
+    //         alert('猜小了');
+    //     } else if (num === random) {
+    //         alert('真棒，猜对了！');
+    //         break;
+    //     } else {
+    //         alert('请猜数字哦！')
+    //     }
+    // }
+
+
+
+    // 获取日期
+    // var now = new Date();
+    // console.log(now);   // Fri Apr 22 2022 11:15:31 GMT+0800 (中国标准时间)
+    // var now = new Date('2022-11-19');   // Sat Nov 19 2022 08:00:00 GMT+0800 (中国标准时间)
+    // console.log(now);
+    // var date = new Date();
+    // console.log(date.getFullYear());
+    // console.log(date.getMonth());
+    // console.log(date.getDate());
+    // console.log(date.getday());
+    // console.log(date.getMinutes());
+    // console.log(date.getSeconds());
+    // console.log(date.getDay());
+
+    // 封装一个时间格式为08:08:08的时分秒
+    // function Times() {
+    //     var date = new Date();
+    //     var day = date.getday();
+    //     day = day < 10 ? '0' + day : day;
+    //     var minutes = date.getMinutes();
+    //     minutes = minutes < 10 ? '0' + minutes : minutes;
+    //     var seconds = date.getSeconds();
+    //     seconds = seconds < 10 ? '0' + seconds : seconds;
+    //     console.log(day + ':' + minutes + ':' + seconds);
+    // }
+    // Times();
+
+    // 获取date总的毫秒数（时间戳）  不是当前时间的毫秒数 而是距离1970年1月1号过去了多少毫秒
+    // 1、通过valueOf()
+    // var date = new Date();
+    // console.log(date.valueOf());
+    // // 2、简单的写法（最常用的写法）
+    // var date1 = +new Date();
+    // console.log(date1);
+    // // 3、H5新增的 获得总毫秒数
+    // console.log(Date.now());
+
+    // 验证毫秒转换
+    // var date = +new Date('2022-4-22 16:57:00');
+    // var date1 = +new Date();
+    // var date2 = new Date();
+    // console.log(date);
+    // console.log(date1);
+    // console.log(date2);
+
+    // 倒计时效果
+    // function countDown(Time) {
+    //     var nowTime = +new Date();
+    //     var inputTime = +new Date(Time);
+    //     var Times = (inputTime - nowTime) / 1000;
+    //     var day = parseInt(Times / 60 / 60 / 24);
+    //     day = day < 10 ? '0' + day : day;
+    //     var hours = parseInt(Times / 60 / 60 % 24);
+    //     hours = hours < 10 ? '0' + hours : hours;
+    //     var minutes = parseInt(Times / 60 % 60);
+    //     minutes = minutes < 10 ? '0' + minutes : minutes;
+    //     var seconds = parseInt(Times % 60);
+    //     seconds = seconds < 10 ? '0' + seconds : seconds;
+    //     console.log('距离开始还剩:' + day + '天' + hours + '时' + minutes + '分' + seconds + '秒');
+    // }
+    // countDown('2022-4-23 17:00:00');
+
+
+
+    // 检测是否为数组
+    // 1、instanceof 运算符 它可以用来检验是否为数组
+    // var arr = [];
+    // var obj = new Object();
+    // var fun = {};
+    // console.log(arr instanceof Array);  // true
+    // console.log(obj instanceof Object); // true
+    // console.log(fun instanceof Object); // true
+    // console.log(arr instanceof Object); // true
+    // // 2、Array.isArray(参数)   H5新增方法  ie9以上版本支持
+    // console.log(Array.isArray(arr)); // true
+    // console.log(Array.isArray(obj)); // false
+
+
+
+    // // 添加删除数组元素方法
+    // // 1、push() 在数组末尾添加一个或多个数组元素
+    // var  arr = [1,2,3];
+    // // arr.push(4,'pink');
+    // // console.log(arr);  // [1,2,3,4,'pink'] 
+    // console.log(arr.push(4,'pink')); // 5 ， 返回的是数组长度
+    // console.log(arr);   // [1,2,3,4,'pink'] 
+    // // （1）push 是可以给数组追加新的元素
+    // // （2）push() 参数直接写 数组元素就可以了
+    // // （3）push 完毕之后 返回的结果是新数组的长度
+    // // （4）原数组也会发生变化
+
+    // // 2、unshift 在我们数组的开头 添加一个或多个数组元素 
+    // arr.unshift('red','purple'); 
+    // console.log(arr);   // ['red', 'purple', 1, 2, 3, 4, 'pink']
+    // // （1）unshift 是可以给数组前面追加新的元素
+    // // （2）unshift() 参数直接写 数组元素就可以了
+    // // （3）unshift 完毕之后 返回的结果是新数组的长度
+    // // （4）原数组也会发生变化
+    
+    // // 3、pop() 它可以删除数组的最后一个元素
+    // console.log(arr.pop()); // pink
+    // console.log(arr);   //  ['red', 'purple', 1, 2, 3, 4]
+    // // （1）pop 是可以给数组前面追加新的元素
+    // // （2）pop() 没有参数
+    // // （3）pop 完毕之后 返回的是 删除的那个元素
+    // // （4）原数组也会发生变化
+
+    // // 4、shift() 它可以删除数组的第一个元素
+    // console.log(arr.shift()); // red
+    // console.log(arr);   //  ['purple', 1, 2, 3, 4]
+    // // （1）shift 是可以给数组前面追加新的元素
+    // // （2）shift() 没有参数
+    // // （3）shift 完毕之后 返回的是 删除的那个元素
+    // // （4）原数组也会发生变化
+
+    // 案例：筛选数组   要求把数组中超过2000的删除，剩余的放到新数组中
+    // var arr = [1000,1500,2500,1200,3000,5000,1250];
+    // var newArr = [];
+    // for (var i = 0; i < arr.length; i++) {
+    //     if (arr[i] < 2000) {
+    //         // newArr[newArr.length] = arr[i];
+    //         newArr.push(arr[i]);
+    //     }
+    // }
+    // console.log(newArr);
+
+
+
+    // 数组排序
+    // 1、翻转数组
+    // var arr = ['pink','blue','red','yellow'];
+    // console.log(arr.reverse());
+    // console.log(arr);
+    // // 2、数组排序（冒泡排序）
+    // var arr1 = [6,6,4,2,77,50,2,6,9];
+    // console.log(arr1.sort(function(a,b) {
+    //     // return a - b; // 升序的顺序排列
+    //     return b - a; // 降序的顺序排列
+    // }));
+    // console.log(arr1);
+
+
+
+    // // 返回数组元素索引号方法 indexOf(数组元素) 作用就是返回该元素的索引号
+    // // 它只返回第一个满足条件的索引号
+    // // 若找不到该元素，则返回-1
+    // var arr = [1,3,5,1,2];
+    // console.log(arr.indexOf(1)); // 0
+    // console.log(arr.indexOf(4)); // -1
+
+    // // 返回数组元素索引号方法 lastIndexOf(数组元素) 但是它从后面开始查找
+    // console.log(arr.lastIndexOf(1)); // 3
+
+    // // 数组去重（重点案例）
+    // function unique(arr) {
+    //     var newArr = [];
+    //     for (var i = 0; i < arr.length; i++) {
+    //         if (newArr.indexOf(arr[i]) == -1) {
+    //             newArr.push(arr[i]);
+    //         }
+    //     }
+    //     return newArr;
+    // } 
+    // var arr = [1,2,3,4,4,5,9,1,5,7];
+    // console.log(unique(arr));
+
+
+
+    // // 数组转换为字符串
+    // // 1、toString() 将我们的数组转换为字符串
+    // var arr = [1,2,3];
+    // console.log(arr);   // [1,2,3]
+    // console.log(arr.toString()); // 1,2,3
+
+    // // 2、join('分隔符') 
+    // console.log(arr.join('-')); // 1-2-3
+    // console.log(arr.join('★')); // 1★2★3
+
+
+
+    // // 连接、截取与删除
+    // // 1. concat() 连接两个或多个数组 不影响原数组 返回一个新的数组
+    // var arr = [1,2,3];
+    // var arr1 = [7,8,9];
+    // var newArr = arr.concat(arr1);
+    // console.log(newArr); // [1, 2, 3, 7, 8, 9]
+
+    // // 2. slice() 数组截取(begin,end) 不影响原数组 返回被截取的新数组 
+    // var arr2 = newArr.slice(1,4); 
+    // console.log(arr2);  // [2,3,7] 包括begin,但不包括end
+
+    // // 3. splice() 数组删除(第几个开始，删除几个) 影响原数组 返回被删除的数组 常用
+    // var arr3 = newArr.splice(1,3); 
+    // console.log(arr3);  // [2,3,7]
+    // console.log(newArr); // [1,8,9]
+
+
+    // // 根据字符返回位置
+    // // 案例：查找'abfssfsgdwsfdgsf'中所有o出现的位置及次数
+    // var str = 'abfsofsgdwsfdgsf';
+    // var index = str.indexOf('s');
+    // var num = 0;
+    // var arr = [];
+    // while (index != -1) {
+    //     arr[arr.length] = index;
+    //     num++;
+    //     index = str.indexOf('s',index + 1);
+    // }
+    // console.log(num);
+    // console.log(arr);
+
+
+
+    // // 根据位置返回字符
+    // // 1. charAt(index) 根据位置返回字符
+    // var str = 'honey';
+    // console.log(str.charAt(3)); // e
+    // // 遍历所有字符
+    // for (i = 0; i < str.length; i++) {
+    //     console.log(str.charAt(i));
+    // }
+    // // 2. charCodeAt(index) 返回对应索引号字符的ASCLL值 目的：判断用户按下了那个按钮
+    // console.log(str.charCodeAt(0)); // 104
+    // // 3. str[index] H5新增，IE8+支持 和charAt(index)等效
+    // console.log(str[3]); // e
+
+    // 返回字符位置案例：判断字符串'adafasfs'中出现次数最多的字符，并统计其次数
+
+    // 有一个对象 来判断是否有该属性 对象['属性名']
+    // var o = {
+    //     age: 18
+    // }
+    // console.log(o['age']);
+    // if (o['age']) {
+    //     console.log('有该属性');
+    // } else{
+    //     console.log('没有该属性');
+    // }
+
+    // var str = 'adafasfs';
+    // var o = {};
+    // for (i = 0; i < str.length; i++) {
+    //     var chars = str.charAt(i);
+    //     console.log(chars); 
+    //     if (o[chars]) {
+    //         o[chars]++;
+    //     } else {
+    //         o[chars] = 1;
+    //     }
+    // }
+    // console.log(o); 
+    // // 2.遍历对象
+    // var max = 0;
+    // var ch = ''
+    // for (var k in o) {
+    //     // k 得到的是属性名称
+    //     // o[k] 得到的是属性值
+    //     if (o[k] > max) {
+    //         max = o[k];
+    //         ch = k;
+    //     }
+    // } 
+    // console.log('出现最多的是' + ch + '出现次数是' + max);
+
+
+
+    // // 字符串操作方法
+    // // 1.concat('字符串1','字符串2',.....) 连接一个或多个字符串，等同于+，+更常用
+    // var str = 'honey';
+    // var str1 = 'love';
+    // var str2 = 'you';
+    // console.log(str.concat(str1,str2)); // honeyloveyou
+    // console.log(str.concat('don\'t'));  // honeydon't
+
+    // // 2. substr(start,length) 截取字符 从start开始（索引号），length取的个数 重点记住这个
+    // var newStr = str.substr(0,4);
+    // console.log(newStr); // hone
+
+    // // 3. replace('被替换的字符','替换的字符')
+    // var str3 = str.replace('h','y');
+    // console.log(str3); // yoney
+
+    // // 4. 字符转化为数组 spit('分隔符') 前面我们学过join把数组转化为字符串
+    // var str4 = 'black,red,pink,yellow';
+    // var str5 = str4.split(',');
+    // console.log(str5); //  ['black', 'red', 'pink', 'yellow']
+    // var str6 = str5.join('@');
+    // console.log(str6); // black@red@pink@yellow
+
+    // // 5. 转换大写 toUpperCase() 
+    // var str7 = str.toUpperCase();
+    // console.log(str7);
+
+    // // 6. 转换小写 toLowerCase()
+    // var str8 = str7.toLowerCase();
+    // console.log(str8);
+
+
+
+    // // 简单类型传参
+    // // 函数的形参也可以看做是一个变量，当我们把一个值类型变量作为参数传给函数的形参时，
+    // // 其实是把变量在栈空间里的值复制了一份给形参，那么这个方法内部对形参做任何更改，
+    // // 都不会影响到外部变量
+    // function fn(a) {
+    //     a++;
+    //     console.log(a);
+    // }
+    // var x = 10;
+    // fn(x);  // 11 
+    // console.log(x); // 10
+   
+    // // 复杂类型传参
+    // // 函数的形参也可以看做是一个变量，当我们把引用类型变量传给形参时，其实是把变量在
+    // // 栈空间里保存的堆地址复制给了形参，形参和实参其实保存的是同一个堆地址
+    // // 所以操作的是同一个对象
+    // function Person(name) {
+    //     this.name = name;
+    // }
+    // function f1(x) {
+    //     console.log(x.name); // 刘德华
+    //     x.name = '张学友';
+    //     console.log(x.name); // 张学友
+    // }
+    // var p = new Person('刘德华');
+    // console.log(p.name); // 刘德华
+    // f1(p);
+    // console.log(p.name); // 张学友
+
+    
+</script>
+<body>
+    
+</body>
+</html>
