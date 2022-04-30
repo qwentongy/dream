@@ -56,12 +56,12 @@ input {
 }
 
 /* 左浮动 */
-fl {
+.fl {
     float: left;
 }
 
 /* 右浮动 */
-fr {
+.fr {
     float: right;
 }
 
