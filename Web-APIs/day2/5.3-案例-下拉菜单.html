@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            width: 200px;
+            height: 80px;
+            list-style: none;
+            text-align: center;
+        }
+        li li {
+            border: 2px solid yellowgreen;
+            box-sizing: border-box;
+        }
+        a {
+            font-size: 25px;
+            text-decoration: none;
+            line-height: 80px;
+        }
+        .nav li {
+            display: inline-block;
+            position: relative;
+        }
+        .nav ul {
+            position: absolute;
+            top: 80px;
+            display: none;
+        }
+        li:hover {
+            background-color: rgb(193, 185, 185);
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">@我</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">@我</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">@我</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">@我</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script>
+    // 1. 获取元素
+    var nav = document.querySelector('.nav');
+    var lis = nav.children;
+    // console.log(lis);
+    for (var i = 0; i < lis.length; i++) {
+        // lis[i].setAttribute('data-index',i);
+        lis[i].onmouseover = function() {
+            this.children[1].style.display = 'block';
+        }
+        lis[i].onmourseout = function() {
+            this.children[1].style.display = 'none';
+        }
+    }
+</script>
+</html>
