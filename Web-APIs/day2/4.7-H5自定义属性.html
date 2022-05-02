@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div getTime="20" data-demo="10" data-list-name="anny"></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    console.log(div.getTime); // undefined
+    console.log(div.getAttribute('getTime')); // 20
+    // 设置H5自定义属性 H5规定自定义属性data-开头作为属性名并且赋值
+    div.setAttribute('data-index',2);
+    console.log(div.getAttribute('data-index')); // 2
+    // 兼容性获取 element.getAttribute('data-index')
+    // H5新增element.dataset.index 或者 element.dataset['index'] ie11才开始支持
+    // 它智能获取data开头的自定义属性
+    console.log(div.dataset.index); // 2
+    console.log(div.dataset['index']); // 2
+    // div.datdaset 获取的是一个集合 里面存放了所有以data开头的自定义属性
+    console.log(div.dataset); // DOMStringMap {demo: '10', index: '2'}
+    // 如果自定义属性里面有多个-链接的单词，我们获取的时候以驼峰命名法
+    console.log(div.dataset.listName); // anny
+    console.log(div.dataset['listName']); // anny
+</script>
+</html>
