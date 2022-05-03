@@ -20,5 +20,16 @@
     console.log(div.previousSibling); // #text
     console.log(div.nextElementSibling); // <span>我是span</span>
     console.log(div.previousElementSibling); // null
+
+    // 如何解决兼容性问题 自己封装一个兼容性的函数
+    function getNextElementSibling(element) {
+        var el = element;
+        while (el = el.nextSibling) {
+            if (el.nodeType === 1) {
+                return el;
+            }
+        }
+        return null;
+    }
 </script>
 </html>

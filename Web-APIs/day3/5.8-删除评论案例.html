@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            float: right;
+        }
+        li {
+            width: 200px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>提交</button>
+    <ul></ul>
+</body>
+<script>
+    var ul = document.querySelector('ul');
+    var text = document.querySelector('textarea');
+    var btn = document.querySelector('button');
+    btn.onclick = function() {
+        // 1. 创建元素
+        var li = document.createElement('li');
+        if (text.value != '') {
+            li.innerHTML = text.value + '<a href="javascript:;">删除</a>';
+            // 2. 添加元素
+            ul.appendChild(li);
+            text.value = '';
+            // 3. 删除元素
+            var as = document.querySelectorAll('a');
+            for (var i = 0; i < as.length; i++) {
+                as[i].onclick = function() {
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        } else {
+            alert('不能提交空白');
+        }
+    }
+</script>
+</html>
