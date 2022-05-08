@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 第一个问题
+        // console.log('1');
+        // setTimeout(function() {
+        //     console.log('3');
+        // },1000);
+        // console.log('2');
+        // // 结果顺序是1，2，3
+
+        // // 第二个问题
+        // console.log('1');
+        // setTimeout(function() {
+        //     console.log('3');
+        // },0);
+        // console.log('2');
+        // // 结果顺序也是1，2，3
+
+        // 第三个问题
+        console.log('1');
+        document.onclick = function() {
+            console.log('click');
+        }
+        console.log('2');
+        setTimeout(function() {
+            console.log('3');
+        },3000);
+        // 结果顺序是1，2，3,若在3秒前点击document，则顺序是1，2，click，3
+    </script>
+</body>
+</html>

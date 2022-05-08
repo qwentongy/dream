@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            color: white;
+            background-color: black;
+            text-align: center;
+            line-height: 50px;
+        }
+        button  {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="begin">开始计时器</button>
+    <button class="stop">停止计时器</button>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        var hour = document.querySelector('.hour');
+        var minute = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        var inputTime = +new Date('2022-5-7 20:00:00');
+        countDown();
+        var timer;
+        function countDown() {
+            var nowTime = +new Date();
+            var Times = (inputTime - nowTime) / 1000;
+            var day = parseInt(Times / 60 / 60 / 24);
+            day = day < 10 ? '0' + day : day;
+            var hours = parseInt(Times / 60 / 60 % 24);
+            hours = hours < 10 ? '0' + hours : hours;
+            hour.innerHTML = hours;
+            var minutes = parseInt(Times / 60 % 60);
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            minute.innerHTML = minutes;
+            var seconds = parseInt(Times % 60);
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            second.innerHTML = seconds;
+            // console.log('距离开始还剩:' + day + '天' + hours + '时' + minutes + '分' + seconds + '秒');
+        }
+        var begin = document.querySelector('.begin');
+        var stop = document.querySelector('.stop');
+        begin.addEventListener('click',function() {
+            timer = setInterval(countDown,1000);
+        })
+        stop.addEventListener('click',function() {
+            clearInterval(timer);
+        })
+    </script>
+</body>
+</html>

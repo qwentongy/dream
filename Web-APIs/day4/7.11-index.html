@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <button>后退</button>
+    <script>
+        console.log(location.search); // ?uname=提交的内容
+        // 1. 先去掉?   substr('起始的位置',截取几个字符)
+        var uname = location.search.substr(1);
+        console.log(uname); // uname=提交的内容
+        // 2. 利用=把字符串分割为数组 split('=')
+        var arr = uname.split('=');
+        console.log(arr); // ['uname', '提交的内容']
+        var div = document.querySelector('div');
+        div.innerHTML = arr[1] + '欢迎你'; // 提交的内容
+
+
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',function() {
+            // history.back();
+            history.go(-1); // 两者是等价的
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>发送</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',function() {
+            this.setAttribute("disabled", true);
+            var i = 6;
+            btn.innerHTML = '还剩' + i + '秒可再次发送'
+            var timer1 = setInterval(function() {
+                i--;
+                btn.innerHTML = '还剩' + i + '秒可再次发送';
+                if (i > 0) {
+                    i--;
+                }
+                
+                if (i == 0) {
+                    btn.innerHTML = '发送';
+                    clearInterval(timer1);
+                }
+            },1000)
+            setTimeout(function() {
+                btn.removeAttribute("disabled", false);
+            },6000)
+        })
+    </script>
+</body>
+</html>
