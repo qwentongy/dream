@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            background-color: pink;
+            border: 10px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="width: 200px;"></div>
+    <script>
+        var box = document.querySelector('.box');
+        // 1. style 只返回行内样式 写在内联与外联中返回空
+        console.log(box.style.height); // 返回空
+        console.log(box.style.width); // 200px
+        // offset 任意样式表中的样式都可以得到 且包括padding + border 且值不带单位
+        console.log(box.offsetHeight); // 220
+        console.log(box.offsetWidth); // 220
+        // 2. style 可以赋值更新
+        box.style.height = 300 + 'px'; // 生效
+        // offset 不能赋值更改 offset更适合获取元素大小位置
+        box.offsetHeight = 300; // 不生效
+    </script>
+</body>
+</html>

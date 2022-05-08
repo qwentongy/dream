@@ -7,103 +7,11 @@
     <title>Document</title>
 </head>
 <script>
-    // 返回随机数
-    // Math.random(); // 返回[0,1);
-	// Math.floor(Math.random() * 10); // 返回[0,10) ,就是返回0-9的整数;
-	// Math.floor(Math.random() * 11); // 返回[0,11) , 就是返回0-10的整数;
-	// Math.floor(Math.random() * 100); // 返回[0,100) , 就是返会0-99的整数;
-	// Math.floor(Math.random() * 100) + 1; // 返回[1,100] , 就是返回1-100的整数；
-	// Math.floor(Math.random() * (200 - 50) + 50); // 返回[50,200) , 就是返回50-199的整数；
-	// Math.floor(Math.random() * (200 - 50 + 1) + 50); // 返回[50,200] , 就是返回50-200的整数；
-	// Math.floor(Math.random() * (200 - 50));
-	// function GetrndInteger(min,max) {
-	// 	return Math.floor(Math.random() * (max - min)) + min; 
-	// 	} //返回[min,max); 就是返回min-（max-1）的整数;
-	function GetrndInteger(min,max) {
-		return Math.floor(Math.random() * (max - min + 1)) + min; 
-		} //返回[min,max); 就是返回min-max的整数;
-    // console.log(GetrndInteger(1,3));
-
-    // 猜数字小游戏
-    // var random = GetrndInteger(1,10);
-    // while (true) {
-    //     var num = parseFloat(prompt('猜猜我多大'));
-    //     if (num > random) {
-    //         alert('猜大了');
-    //     } else if (num < random) {
-    //         alert('猜小了');
-    //     } else if (num === random) {
-    //         alert('真棒，猜对了！');
-    //         break;
-    //     } else {
-    //         alert('请猜数字哦！')
-    //     }
-    // }
+    
 
 
 
-    // 获取日期
-    // var now = new Date();
-    // console.log(now);   // Fri Apr 22 2022 11:15:31 GMT+0800 (中国标准时间)
-    // var now = new Date('2022-11-19');   // Sat Nov 19 2022 08:00:00 GMT+0800 (中国标准时间)
-    // console.log(now);
-    // var date = new Date();
-    // console.log(date.getFullYear());
-    // console.log(date.getMonth());
-    // console.log(date.getDate());
-    // console.log(date.getday());
-    // console.log(date.getMinutes());
-    // console.log(date.getSeconds());
-    // console.log(date.getDay());
-
-    // 封装一个时间格式为08:08:08的时分秒
-    // function Times() {
-    //     var date = new Date();
-    //     var day = date.getday();
-    //     day = day < 10 ? '0' + day : day;
-    //     var minutes = date.getMinutes();
-    //     minutes = minutes < 10 ? '0' + minutes : minutes;
-    //     var seconds = date.getSeconds();
-    //     seconds = seconds < 10 ? '0' + seconds : seconds;
-    //     console.log(day + ':' + minutes + ':' + seconds);
-    // }
-    // Times();
-
-    // 获取date总的毫秒数（时间戳）  不是当前时间的毫秒数 而是距离1970年1月1号过去了多少毫秒
-    // 1、通过valueOf()
-    // var date = new Date();
-    // console.log(date.valueOf());
-    // // 2、简单的写法（最常用的写法）
-    // var date1 = +new Date();
-    // console.log(date1);
-    // // 3、H5新增的 获得总毫秒数
-    // console.log(Date.now());
-
-    // 验证毫秒转换
-    // var date = +new Date('2022-4-22 16:57:00');
-    // var date1 = +new Date();
-    // var date2 = new Date();
-    // console.log(date);
-    // console.log(date1);
-    // console.log(date2);
-
-    // 倒计时效果
-    // function countDown(Time) {
-    //     var nowTime = +new Date();
-    //     var inputTime = +new Date(Time);
-    //     var Times = (inputTime - nowTime) / 1000;
-    //     var day = parseInt(Times / 60 / 60 / 24);
-    //     day = day < 10 ? '0' + day : day;
-    //     var hours = parseInt(Times / 60 / 60 % 24);
-    //     hours = hours < 10 ? '0' + hours : hours;
-    //     var minutes = parseInt(Times / 60 % 60);
-    //     minutes = minutes < 10 ? '0' + minutes : minutes;
-    //     var seconds = parseInt(Times % 60);
-    //     seconds = seconds < 10 ? '0' + seconds : seconds;
-    //     console.log('距离开始还剩:' + day + '天' + hours + '时' + minutes + '分' + seconds + '秒');
-    // }
-    // countDown('2022-4-23 17:00:00');
-
+    
 
 
     // 检测是否为数组

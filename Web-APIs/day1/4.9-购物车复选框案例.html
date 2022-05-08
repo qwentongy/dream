@@ -23,36 +23,11 @@
             border: 1px solid rgb(177, 171, 171);
             text-align: center;
         }
-        
-        /* 4 */
-        .tab li {
-            list-style: none;
-            display: inline-block;
-            width: 60px;
-            height: 30px;
-            border: 2px solid black;
-            text-align: center;
-        }
-        .tab .boxs div {
-            display: none;
-            width: 240px;
-            height: 200px;
-            border: 2px solid black;
-        }
     </style>
 </head>
 <body>
-    <!-- 1 -->
-    <!-- 排他思想 -->
-    <!-- <button>按钮</button>
-    <button>按钮</button>
-    <button>按钮</button>
-    <button>按钮</button>
-    <button>按钮</button> -->
-
-    <!-- 2 -->
     <!-- 复选框案例 -->
-    <!-- <div class="wrap">
+    <div class="wrap">
             <table>
                 <thead>
                     <tr>
@@ -87,32 +62,34 @@
                     </tr>
                 </tbody>
             </table>
-        </div> -->
-
-    <!-- 3 -->
-    <!-- 获取元素 -->
-    <!-- <div class="demo"></div> -->
-
-    <!-- 4 -->
-    <!-- Tab栏切换（重点案例） -->
-    <!-- <div class="tab">
-        <div class="box">
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-            </ul>
         </div>
-        <div class="boxs">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-        </div>
-    </div> -->
-
-    
 </body>
-<script src="./Js/day2.js"></script>
+<script>
+    // a. 全选和取消全选做法：让下面所有复选框的 checked 属性（选中状态）跟随全选按钮即可
+    var j_cbAll = document.querySelector('#j_cbAll');
+    var j_tb = document.querySelector('#j_tb').querySelectorAll('input');
+    // 注册事件
+    j_cbAll.onclick = function() {
+        // this.checked 它可以得到当前复选框的选中状态，如果是true，就是选中，若未选中则是false
+        // console.log(this.checked);
+        for (var i = 0; i < j_tb.length; i++) {
+            j_tb[i].checked = this.checked;
+        }
+    }
+    // b. 下面全部选中，上面才能选中的做法：给下面所有复选框绑定点击事件，每次点击都要判断是否全部选中
+    for (var i = 0; i < j_tb.length; i++) {
+        j_tb[i].onclick = function() {
+            // flag控制全选按钮是否选中
+            var flag = true;
+            // 每次点击下面的复选框都要循环检查3个小按钮是否全部被选中
+            for (var i = 0; i < j_tb.length ; i++) {
+                if (!j_tb[i].checked) {
+                    flag = false;
+                    break; // 退出for循环 这样可以提高效率 只要有一个没有选中 剩下的就无需循环判断了
+                }
+            }
+            j_cbAll.checked = flag;
+        }
+    }
+</script>
 </html>
