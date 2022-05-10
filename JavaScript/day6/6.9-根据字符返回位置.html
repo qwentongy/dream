@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 根据字符返回位置
+        // 案例：查找'abfssfsgdwsfdgsf'中所有o出现的位置及次数
+        var str = 'abfsofsgdwsfdgsf';
+        var index = str.indexOf('s');
+        var num = 0;
+        var arr = [];
+        while (index != -1) {
+            arr[arr.length] = index;
+            num++;
+            index = str.indexOf('s',index + 1);
+        }
+        console.log(num);
+        console.log(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 连接、截取与删除
+        // 1. concat() 连接两个或多个数组 不影响原数组 返回一个新的数组
+        var arr = [1,2,3];
+        var arr1 = [7,8,9];
+        var newArr = arr.concat(arr1);
+        console.log(newArr); // [1, 2, 3, 7, 8, 9]
+
+        // 2. slice() 数组截取(begin,end) 不影响原数组 返回被截取的新数组
+        var arr2 = newArr.slice(1,4);
+        console.log(arr2);  // [2,3,7] 包括begin,但不包括end
+
+        // 3. splice() 数组删除(第几个开始，删除几个) 影响原数组 返回被删除的数组 常用
+        var arr3 = newArr.splice(1,3);
+        console.log(arr3);  // [2,3,7]
+        console.log(newArr); // [1,8,9]
+    </script>
+</body>
+</html>

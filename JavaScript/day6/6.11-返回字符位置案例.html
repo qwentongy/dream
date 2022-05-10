@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 返回字符位置案例：判断字符串'adafasfs'中出现次数最多的字符，并统计其次数
+
+        // 有一个对象 来判断是否有该属性 对象['属性名']
+        var o = {
+            age: 18
+        }
+        console.log(o['age']);
+        if (o['age']) {
+            console.log('有该属性');
+        } else{
+            console.log('没有该属性');
+        }
+
+        var str = 'adafasfs';
+        var o = {};
+        for (i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            console.log(chars);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        // 2.遍历对象
+        var max = 0;
+        var ch = ''
+        for (var k in o) {
+            // k 得到的是属性名称
+            // o[k] 得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log('出现最多的是' + ch + '出现次数是' + max);
+    </script>
+</body>
+</html>
