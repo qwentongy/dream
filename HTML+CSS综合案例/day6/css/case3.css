@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    height: 50px;
+    list-style: none;
+}
+li{
+    float: left;
+    width: 80px;
+    text-align: center;
+    background-color: #ffc0cb;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    line-height: 50px;
+    display: inline-block;
+    width: 50px;
+}
+li:hover{
+    background-color: #008000;
+}

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    height: 40px;
+    border-top: 3px solid orange;
+    border-bottom: 1px solid #edeef0;
+}
+.nav_1{
+    list-style: none;
+}
+li{
+    line-height: 40px;
+    padding: 0 20px;
+    display: inline-block;
+}
+li:hover{
+    background-color: #c4c4c4;
+    color: #ff8400;
+}

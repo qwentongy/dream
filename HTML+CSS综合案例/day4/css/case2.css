@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 800px;
+}
+.nav{
+    list-style: none;
+}
+li{
+    float: left;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+}
+.d1{
+    background-image: url(../images/dbox1.png);
+}
+.d2{
+    background-image: url(../images/dbox2.png);
+}
+.d3{
+    background-image: url(../images/dbox3.png);
+}
+.d4{
+    background-image: url(../images/dbox4.png);
+}
+.d1:hover{
+    background-image: url(../images/dbox5.png);
+}
+.d2:hover{
+    background-image: url(../images/dbox6.png);
+}
+.d3:hover{
+    background-image: url(../images/dbox7.png);
+}
+.d4:hover{
+    background-image: url(../images/dbox8.png);
+}

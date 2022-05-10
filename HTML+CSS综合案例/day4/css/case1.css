@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 425px;
+    margin: 0 auto;
+}
+.nav{
+    list-style-type: none;
+}
+li{
+    width: 80px;
+    height: 50px;
+    background-color: red;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 50px;
+}
+.orange{
+    background-color: orange;
+}
