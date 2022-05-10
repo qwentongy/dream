@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>提交</button>
+    <ul></ul>
+</body>
+<script>
+    var ul = document.querySelector('ul');
+    var text = document.querySelector('textarea');
+    var btn = document.querySelector('button');
+    btn.onclick = function() {
+        var li = document.createElement('li');
+        if (text.value != '') {
+            li.innerHTML = text.value;
+            ul.appendChild(li);
+            text.value = '';
+        } else {
+            alert('不能提交空白');
+        }
+    }
+</script>
+</html>

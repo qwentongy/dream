@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tab li {
+            list-style: none;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        .tab .boxs div {
+            display: none;
+            width: 240px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+     <!-- Tab栏切换（重点案例） -->
+    <div class="tab">
+        <div class="box">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+</body>
+<script>
+    var lis = document.querySelector('.box').querySelectorAll('li');
+    var boxs = document.querySelector('.boxs').querySelectorAll('div');
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].index = [i];
+        boxs[i].index = [i];
+        lis[i].onclick = function() {
+            // console.log(this.index);
+            for (var i = 0; i < lis.length; i++) {
+                boxs[i].style.display = 'none';
+            }
+            boxs[this.index].style.display = 'inline-block';
+        }
+    }
+</script>
+</html>

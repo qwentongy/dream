@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 用户输入任意两个数，弹出弹出任意算数运算
+        var num1 = parseFloat(prompt('请输入第一个数'));
+        var num2 = parseFloat(prompt('请输入第二个数'));
+        function getOperation(num1,num2) {
+            var sum = num1 + num2;
+            var subtract = num1 - num2;
+            var multiply = num1 * num2;
+            var divide = num1 / num2;
+            return [sum,subtract,multiply,divide];
+        }
+        operation = getOperation(num1,num2);
+        alert('相加=' + operation[0] + '\n' + '相减=' + operation[1] + '\n' + '相乘=' + operation[2] + '\n' + '相除=' + operation[3]);
+    </script>
+</body>
+</html>

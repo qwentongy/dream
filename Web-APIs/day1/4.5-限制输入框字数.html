@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="请输入密码">
+    <div>请输入6-16位的密码</div>
+</body>
+<script>
+    // 密码框提示错误格式
+    var input = document.querySelector('input');
+    var box = document.querySelector('div');
+    input.onfocus = function() {
+        if (this.value == '请输入密码') {
+            this.value = '';
+        }
+        box.innerHTML = '请输入6-16位的密码';
+    }
+    input.onblur = function() {
+        if (this.value == '') {
+            this.value = '请输入密码'
+        } else {
+            if (this.value.length < 6) {
+                box.innerHTML = '密码太短，最少6个字符';
+            } else if (this.value.length > 16) {
+                box.innerHTML = '密码太长，最多16个字符';
+            } else {
+                box.innerHTML = '密码符合';
+            }
+        }
+    }
+</script>
+</html>

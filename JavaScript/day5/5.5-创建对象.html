@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 用new Object形式创建一个形象
+        var arr = new Object;
+        arr.uname = '鸣人';
+        arr.sex = '男';
+        arr.age = 19;
+        arr.skill = function() {
+            console.log('影分身术');
+        }
+        console.log(arr);
+
+        // 用构造函数创建两个对象
+        function Hero(uname,type,boold,attack){
+            this.uname = uname;
+            this.type = type;
+            this.boold = boold;
+            this.attack = attack;
+        }
+        var houyi = new Hero('后羿','射手性',100,'远程');
+        console.log(houyi);
+        var lianpo = new Hero('廉颇','坦克性',500,'近战');
+        console.log(lianpo);
+    </script>
+</body>
+</html>

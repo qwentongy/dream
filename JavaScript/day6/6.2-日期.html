@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 获取日期
+        // var now = new Date();
+        // console.log(now);   // Fri Apr 22 2022 11:15:31 GMT+0800 (中国标准时间)
+        // var now = new Date('2022-11-19');   // Sat Nov 19 2022 08:00:00 GMT+0800 (中国标准时间)
+        // console.log(now);
+        // var date = new Date();
+        // console.log(date.getFullYear());
+        // console.log(date.getMonth());
+        // console.log(date.getDate());
+        // console.log(date.getday());
+        // console.log(date.getMinutes());
+        // console.log(date.getSeconds());
+        // console.log(date.getDay());
+
+        // 封装一个时间格式为08:08:08的时分秒
+        // function Times() {
+        //     var date = new Date();
+        //     var day = date.getday();
+        //     day = day < 10 ? '0' + day : day;
+        //     var minutes = date.getMinutes();
+        //     minutes = minutes < 10 ? '0' + minutes : minutes;
+        //     var seconds = date.getSeconds();
+        //     seconds = seconds < 10 ? '0' + seconds : seconds;
+        //     console.log(day + ':' + minutes + ':' + seconds);
+        // }
+        // Times();
+
+        // 获取date总的毫秒数（时间戳）  不是当前时间的毫秒数 而是距离1970年1月1号过去了多少毫秒
+        // 1、通过valueOf()
+        // var date = new Date();
+        // console.log(date.valueOf());
+        // // 2、简单的写法（最常用的写法）
+        // var date1 = +new Date();
+        // console.log(date1);
+        // // 3、H5新增的 获得总毫秒数
+        // console.log(Date.now());
+
+        // 验证毫秒转换
+        // var date = +new Date('2022-4-22 16:57:00');
+        // var date1 = +new Date();
+        // var date2 = new Date();
+        // console.log(date);
+        // console.log(date1);
+        // console.log(date2);
+
+        // 倒计时效果
+        function countDown(Time) {
+            var nowTime = +new Date();
+            var inputTime = +new Date(Time);
+            var Times = (inputTime - nowTime) / 1000;
+            var day = parseInt(Times / 60 / 60 / 24);
+            day = day < 10 ? '0' + day : day;
+            var hours = parseInt(Times / 60 / 60 % 24);
+            hours = hours < 10 ? '0' + hours : hours;
+            var minutes = parseInt(Times / 60 % 60);
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var seconds = parseInt(Times % 60);
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            console.log('距离开始还剩:' + day + '天' + hours + '时' + minutes + '分' + seconds + '秒');
+        }
+        countDown('2022-4-23 17:00:00');
+
+    </script>
+</body>
+</html>

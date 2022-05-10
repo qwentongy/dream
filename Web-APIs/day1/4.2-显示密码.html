@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" class="p">
+    <input type="button" class="t" value="显示密码">
+</body>
+<script>
+    // 点击将密码框显示为文本框 并可以查看密码明文
+    var p = document.querySelector('.p');
+    var t = document.querySelector('.t');
+    var flag = true;
+    t.onclick = function() {
+        // 方法一：
+        // if (p.type == 'password') {
+        //     p.type = 'text';
+        //     t.value = '隐藏密码'
+        // } else {
+        //     p.type = 'password';
+        //     t.value = '显示密码'
+        // }
+        
+         // 方法二：
+        if (flag) {
+            p.type = 'text';
+            t.value = '隐藏密码';
+            flag = false;
+        } else {
+            p.type = 'password';
+            t.value = '显示密码';
+            flag = true;
+        }
+    }
+</script>
+</html>

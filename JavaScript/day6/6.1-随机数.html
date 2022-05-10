@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 返回随机数
+        // Math.random(); // 返回[0,1);
+        // Math.floor(Math.random() * 10); // 返回[0,10) ,就是返回0-9的整数;
+        // Math.floor(Math.random() * 11); // 返回[0,11) , 就是返回0-10的整数;
+        // Math.floor(Math.random() * 100); // 返回[0,100) , 就是返会0-99的整数;
+        // Math.floor(Math.random() * 100) + 1; // 返回[1,100] , 就是返回1-100的整数；
+        // Math.floor(Math.random() * (200 - 50) + 50); // 返回[50,200) , 就是返回50-199的整数；
+        // Math.floor(Math.random() * (200 - 50 + 1) + 50); // 返回[50,200] , 就是返回50-200的整数；
+        // Math.floor(Math.random() * (200 - 50));
+        // function GetrndInteger(min,max) {
+        // 	return Math.floor(Math.random() * (max - min)) + min; 
+        // 	} //返回[min,max); 就是返回min-（max-1）的整数;
+        function GetrndInteger(min,max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min; 
+            } //返回[min,max); 就是返回min-max的整数;
+        // console.log(GetrndInteger(1,3));
+
+        // 猜数字小游戏
+        var random = GetrndInteger(1,10);
+        while (true) {
+            var num = parseFloat(prompt('猜猜我多大'));
+            if (num > random) {
+                alert('猜大了');
+            } else if (num < random) {
+                alert('猜小了');
+            } else if (num === random) {
+                alert('真棒，猜对了！');
+                break;
+            } else {
+                alert('请猜数字哦！')
+            }
+        }
+    </script>
+</body>
+</html>

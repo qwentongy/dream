@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 添加删除数组元素方法
+        // 1、push() 在数组末尾添加一个或多个数组元素
+        var  arr = [1,2,3];
+        // arr.push(4,'pink');
+        // console.log(arr);  // [1,2,3,4,'pink'] 
+        console.log(arr.push(4,'pink')); // 5 ， 返回的是数组长度
+        console.log(arr);   // [1,2,3,4,'pink'] 
+        // （1）push 是可以给数组追加新的元素
+        // （2）push() 参数直接写 数组元素就可以了
+        // （3）push 完毕之后 返回的结果是新数组的长度
+        // （4）原数组也会发生变化
+
+        // 2、unshift 在我们数组的开头 添加一个或多个数组元素 
+        arr.unshift('red','purple'); 
+        console.log(arr);   // ['red', 'purple', 1, 2, 3, 4, 'pink']
+        // （1）unshift 是可以给数组前面追加新的元素
+        // （2）unshift() 参数直接写 数组元素就可以了
+        // （3）unshift 完毕之后 返回的结果是新数组的长度
+        // （4）原数组也会发生变化
+        
+        // 3、pop() 它可以删除数组的最后一个元素
+        console.log(arr.pop()); // pink
+        console.log(arr);   //  ['red', 'purple', 1, 2, 3, 4]
+        // （1）pop 是可以给数组前面追加新的元素
+        // （2）pop() 没有参数
+        // （3）pop 完毕之后 返回的是 删除的那个元素
+        // （4）原数组也会发生变化
+
+        // 4、shift() 它可以删除数组的第一个元素
+        console.log(arr.shift()); // red
+        console.log(arr);   //  ['purple', 1, 2, 3, 4]
+        // （1）shift 是可以给数组前面追加新的元素
+        // （2）shift() 没有参数
+        // （3）shift 完毕之后 返回的是 删除的那个元素
+        // （4）原数组也会发生变化
+
+        // 案例：筛选数组   要求把数组中超过2000的删除，剩余的放到新数组中
+        var arr = [1000,1500,2500,1200,3000,5000,1250];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] < 2000) {
+                // newArr[newArr.length] = arr[i];
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+    </script>
+</body>
+</html>

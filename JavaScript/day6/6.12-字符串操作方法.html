@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 字符串操作方法
+        // 1.concat('字符串1','字符串2',.....) 连接一个或多个字符串，等同于+，+更常用
+        var str = 'honey';
+        var str1 = 'love';
+        var str2 = 'you';
+        console.log(str.concat(str1,str2)); // honeyloveyou
+        console.log(str.concat('don\'t'));  // honeydon't
+
+        // 2. substr(start,length) 截取字符 从start开始（索引号），length取的个数 重点记住这个
+        var newStr = str.substr(0,4);
+        console.log(newStr); // hone
+
+        // 3. replace('被替换的字符','替换的字符')
+        var str3 = str.replace('h','y');
+        console.log(str3); // yoney
+
+        // 4. 字符转化为数组 spit('分隔符') 前面我们学过join把数组转化为字符串
+        var str4 = 'black,red,pink,yellow';
+        var str5 = str4.split(',');
+        console.log(str5); //  ['black', 'red', 'pink', 'yellow']
+        var str6 = str5.join('@');
+        console.log(str6); // black@red@pink@yellow
+
+        // 5. 转换大写 toUpperCase() 
+        var str7 = str.toUpperCase();
+        console.log(str7);
+
+        // 6. 转换小写 toLowerCase()
+        var str8 = str7.toLowerCase();
+        console.log(str8);
+    </script>
+</body>
+</html>
