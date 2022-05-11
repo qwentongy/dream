@@ -11,9 +11,11 @@
             padding: 0;
         }
         .box {
+            position: relative;
             width: 200px;
             height: 200px;
-            margin: 100px;
+            /* margin: 100px; */
+            left: 100px;
             background-color: pink;
             /* border: 5px solid blue; */
         }
@@ -23,11 +25,31 @@
     <div class="box"></div>
     <script>
         var box = document.querySelector('.box');
+        // box.addEventListener('mousedown',function(e) {
+        //     var x = e.pageX - box.offsetLeft;
+        //     var y = e.pageY - box.offsetTop;
+        //     console.log(e.pageX);
+        //     console.log(box.offsetLeft);
+        //     console.log(x);
+        // })
         box.addEventListener('click',function(e) {
             var x = e.pageX - box.offsetLeft;
             var y = e.pageY - box.offsetTop;
             console.log(x);
             console.log(y);
+        });
+        box.addEventListener('mousedown',function(e) {
+            var x = e.pageX - box.offsetLeft;
+            var y = e.pageY - box.offsetTop;
+            document.addEventListener('mousemove',move)
+            function move(e) {
+                console.log(e.pageX - x);
+                box.style.left = e.pageX - x + 'px';
+                box.style.top = e.pageY - y + 'px';
+            }
+            box.addEventListener('mouseup',function() {
+                document.removeEventListener('mousemove',move)
+            })
         })
     </script>
 </body>
