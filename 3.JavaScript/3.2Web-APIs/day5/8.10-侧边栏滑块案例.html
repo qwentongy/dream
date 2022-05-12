@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigbox {
+            width: 100%;
+            height: 5000px;
+        }
+        .box {
+            position: relative;
+            top: 300px;
+            left: 1810px;
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    var box = document.querySelector('.box');
+    var bigbox = document.querySelector('.bigbox');
+    document.addEventListener('scroll',function() {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 300) {
+            box.style.top = window.pageYOffset + 'px';
+        }
+    })
+</script>
+</html>

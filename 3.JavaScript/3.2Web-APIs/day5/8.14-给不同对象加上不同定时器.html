@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+        .box1 {
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <button>开始</button>
+    <script>
+        function move(obj,target) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                obj.style.left = obj.offsetLeft + 1 + 'px';
+                if(obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                }
+            })
+        }
+        var box = document.querySelector('.box');
+        var box1 = document.querySelector('.box1');
+        var btn = document.querySelector('button');
+        move(box,800);
+        btn.addEventListener('click',function() {
+            move(box1,900);
+        })
+    </script>
+</body>
+</html>

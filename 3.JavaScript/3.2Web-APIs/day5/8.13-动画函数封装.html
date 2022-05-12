@@ -7,21 +7,27 @@
     <title>Document</title>
     <style>
         div {
+            position: absolute;
             width: 200px;
             height: 200px;
-            background: pink;
-            border: 10px solid red;
-            padding: 10px;
+            background-color: pink;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <div>
-        我是内容
-    </div>
+    <div></div>
     <script>
+        function move(obj,len) {
+            var timer = setInterval(function() {
+                obj.style.left = obj.offsetLeft + 1 + 'px';
+                if(obj.offsetLeft == len) {
+                    clearInterval(timer);
+                }
+            })
+        }
         var div = document.querySelector('div');
-        console.log(div.scrollHeight);
+        move(div,800);
     </script>
 </body>
 </html>

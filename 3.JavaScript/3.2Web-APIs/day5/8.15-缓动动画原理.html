@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+        .box1 {
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <button>移动</button>
+    <script>
+        function retardMove(obj,target) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                // 将布长值改为整数 不要出现小数问题
+                var step = (target - obj.offsetLeft) / 100;
+                step = step > 0 ? Math.ceil((target - obj.offsetLeft) / 100) : Math.fool((target - obj.offsetLeft) / 100);
+                obj.style.left = obj.offsetLeft + step + 'px';
+                if(obj.offsetLeft == target) {
+                    console.log(1);
+                    clearInterval(obj.timer);
+                }
+            },10)
+        }
+        var box = document.querySelector('.box');
+        var box1 = document.querySelector('.box1');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',function() {
+            retardMove(box1,900);
+        })
+    </script>
+</body>
+</html>
