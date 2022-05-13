@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            text-align: center;
+        }
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            /* text-align: center; 该元素对子元素中的大盒子不生效 */
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* margin: 0 auto 一般针对于固定宽度的盒子，如果大盒子没有设置宽度，此时会默认占满父元素的宽度 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>我是一行文字</p>
+        <span>我是一行文字</span><br>
+        <input type="text"><br>
+        <a href="">我是一个超链接</a><br>
+        <img src="./day3/images/a.png" alt="">
+        <!-- 如需让以上元素水平居中，text-align:center 需要给父级元素设置此样式 -->
+    </div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <!-- 如果需要让 div p h(大盒子) 水平居中，直接给当前元素本身设置即可 -->
+    <!-- margin: 0 auto 一般针对于有固定宽度的盒子，如果大盒子没有设置宽度，此时会默认占满一行 -->
+</body>
+</html>

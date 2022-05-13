@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            text-align: center;
+            /* 让单行文本垂直居中可以设置 line-height: 文字父元素高度; */
+            /* 网页精准布局时，会设置 line-height: 1 可以取消上下间距 注意1是不带单位的 */
+            /* font: italic 400 20px 楷体; */
+            /* line-height: 400px; */
+            /* line-height: 1; */
+            /* 行高与font连写时需要注意覆盖问题 */
+            /* 实际font中是有line-height属性的 font: style weight size/line-height family */
+            font: italic 400 20px/400px 楷体;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我是真的帅</div>
+</body>
+</html>

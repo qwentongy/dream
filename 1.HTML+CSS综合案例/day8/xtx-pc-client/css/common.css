@@ -41,7 +41,7 @@
     height: 130px;
     padding-top: 30px;
     box-sizing: border-box;
-    background-color: pink;
+    /* background-color: pink; */
 }
 /* logo */
 .xtx-main-nav .logo {
@@ -94,4 +94,84 @@
     width: 35px;
     height: 33px;
     background: url(../images/sprites.png) -158px -139px;
+}
+.cart {
+    position: relative;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/sprites.png) -239px -140px;
+}
+
+/* 侧导航栏 */
+main {
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+}
+.main-nav {
+    position: absolute;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(4, 4, 4, 0.8);
+}
+.main-nav a {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+.main-nav a:hover {
+    background-color: rgb(39, 186, 155);
+}
+
+/* 轮播图 */
+.banner a {
+    display: inline-block;
+    width: 1240px;
+    height: 500px;
+}
+
+/* 主体商品1 */
+.commodity-head {
+    height: 110px;
+}
+.commodity-head p {
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 5px;
+    line-height: 110px;
+}
+.commodity-head span {
+    margin-left: 15px;
+    color: rgb(153, 153, 153);
+}
+.commodity-head a {
+    line-height: 110px;
+    color: rgb(153, 153, 153);
+}
+.commodity-body li{
+    width: 305px;
+    float: left;
+    overflow: hidden;
+    margin-right: 5px;
+}
+.commodity-body img {
+    width: 309px;
+}
+.commodity-body ul:last-child {
+    margin-right: 0;
+}
+.commodity-body p {
+    height: 45px;
+    text-align: center;
+    font: italic 500 20px/45px 正楷;
+}
+.commodity-body .price {
+    color: red;
+}
+.commodity-body li:hover {
+    text-shadow: #cdcdcd 5px;
 }
