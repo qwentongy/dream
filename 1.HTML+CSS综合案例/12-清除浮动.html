@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .father {
+            width: 300px;
+            background-color: pink;
+        }
+        .son {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        /* .clear {
+            clear: both;
+        } */
+        /* 单伪元素清除法 */
+        .clearfix::after {
+            content: '.';
+            display: block;
+            clear: both;
+            /* 补充代码：有些浏览器不识别添加空的伪元素，所以content里面加内容
+            并设置高度为0（使添加的文本不撑大父元素）
+            且设置visibility:hidden（隐藏元素并且占原本空间） */
+            height: 0;
+            visibility: hidden;
+        }
+
+        /* 双伪元素清除法 */
+        /* 既可清除浮动，也可清除盒子塌陷问题 */
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="father clearfix">
+        <div class="son"></div>
+        <!-- <div class="clear"></div> -->
+    </div>
+</body>
+</html>
