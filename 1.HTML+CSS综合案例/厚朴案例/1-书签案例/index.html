@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .contain {
+            width: 720px;
+            margin: 0 auto;
+        }
+        /* 头部模块 */
+        header {
+            position: relative;
+            height: 113px;
+            background: url('./images/1.jpg');
+        }
+        header .edit a {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 35px;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            background-color: rgb(88,69,230);
+        }
+        /* 主体部分 */
+        article {
+            height: 100%;
+            overflow: auto;
+        }
+        article nav {
+            position: relative;
+            margin-top: 10px;
+            height: 80px;
+            background-color: #fff;
+            background: linear-gradient(rgb(86,152,253),rgb(130,234,253));
+        }
+        article nav img {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        article nav p {
+            padding-left: 100px;
+            line-height: 80px;
+            color: white;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        article section div {
+            position: relative;
+            height: 90px;
+            border-left: 8px solid red;
+        }
+        article section p {
+            padding-left: 50px;
+            font-size: 25px;
+            line-height: 90px;
+        }
+        article section img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        article section .article_content {
+            position: relative;
+            /* top: 90px; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部模块 -->
+    <header class="contain">
+        <div class="edit"><a href="javascript:;">编辑</a></div>
+    </header>
+    <!-- 主体部分 -->
+    <article class="contain">
+        <nav>
+            <img src="./images/2.png" alt="">
+            <p>2022/5/25</p>
+        </nav>
+        <section>
+            <div>
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
