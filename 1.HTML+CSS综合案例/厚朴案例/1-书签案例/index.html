@@ -35,10 +35,6 @@
             background-color: rgb(88,69,230);
         }
         /* 主体部分 */
-        article {
-            height: 100%;
-            overflow: auto;
-        }
         article nav {
             position: relative;
             margin-top: 10px;
@@ -59,9 +55,11 @@
             font-size: 25px;
             font-weight: 500;
         }
-        article section div {
+        article section .article_header {
             position: relative;
             height: 90px;
+        }
+        .article_header:nth-of-type(1){
             border-left: 8px solid red;
         }
         article section p {
@@ -75,9 +73,20 @@
             top: 50%;
             transform: translateY(-50%);
         }
-        article section .article_content {
-            position: relative;
-            /* top: 90px; */
+        article .article_content ul {
+            display: none;
+            list-style: none;
+            padding-left: 50px;
+            background-color: rgb(222, 225, 230);
+        }article .article_content li {
+            height: 40px;
+            line-height: 40px;
+        }
+        article .article_header:hover+.article_content ul {
+            display: block;
+        }
+        .article_content ul:hover {
+            display: block;
         }
     </style>
 </head>
@@ -93,7 +102,155 @@
             <p>2022/5/25</p>
         </nav>
         <section>
-            <div>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+    </article>
+    <article class="contain">
+        <nav>
+            <img src="./images/2.png" alt="">
+            <p>2022/5/25</p>
+        </nav>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+    </article>
+    <article class="contain">
+        <nav>
+            <img src="./images/2.png" alt="">
+            <p>2022/5/25</p>
+        </nav>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="article_header">
+                <p>爱读书细节化，LOGO设计</p>
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="article_content">
+                <ul>
+                    <li>创立时间：<b>1993/6/13</b></li>
+                    <li>类型：<b>设计类型</b></li>
+                    <li>收款名：<b>王幸飞UI设计课程</b></li>
+                    <li>金额：<b>3000元</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>收款方式：<b>支付宝</b></li>
+                    <li>联系电话：<b>15297951536</b></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="article_header">
                 <p>爱读书细节化，LOGO设计</p>
                 <img src="./images/3.png" alt="">
             </div>
