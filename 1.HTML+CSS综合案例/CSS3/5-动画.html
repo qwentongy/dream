@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 动画名称 */
+            animation-name: move;
+            /* 动画完成时间 */
+            animation-duration: 10s;
+            /* 运动曲线 */
+            /* animation-timing-function: ease; */
+            /* 何时开始 */
+            /* animation-delay: 1s; */
+            /* 重复次数 count 次数 infinite 无限 */
+            animation-iteration-count: infinite;
+            /* 是否反方向播放 默认是normal 如果想要反方向就写 alternate */
+            animation-direction: alternate;
+            /* 动画结束后默认回到初始位置 默认属性为 backward 我们可以让他停留在结束位置 属性值为 forwards */
+            /* animation-fill-mode: forwards; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: move 10s linear 0 infinite alternate forwards;
+            /* 前两个属性一定要写 */
+            animation: move 10s;
+        }
+        .box:hover {
+            /* 鼠标停留在盒子上时是否停止动画 默认 running 若要停留则写 paused */
+            animation-play-state: paused;
+        }
+        @keyframes move {
+            0% {
+                transform: translate(0,0);
+            }
+            25% {
+                transform: translate(1000px,0);
+            }
+            50% {
+                transform: translate(1000px,500px);
+            }
+            75% {
+                transform: translate(0,500px);
+            }
+            100% {
+                transform: translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

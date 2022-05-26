@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .map {
+            position: relative;
+            width: 1425px;
+            height: 1101px;
+            background: url(./images/map.gif) no-repeat;
+        }
+        .map .city {
+            position: absolute;
+            top: 745px;
+            left: 911px;
+        }
+        .map .dotted {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #009dfd;
+            border-radius: 50%;
+        }
+        .map div[class^='pulse'] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #009dfd;
+            animation: pulse 1.2s infinite;
+        }
+        .map div.pulse2 {
+            animation: pulse 0.8s infinite;
+        }
+        .map div.pulse3 {
+            animation: pulse 1.6s infinite;
+        }
+        @keyframes pulse {
+            0% {
+
+            }
+            50% {
+                width: 16px;
+                height: 16px;
+                opacity: 1;
+            }
+            100% {
+                width: 32px;
+                height: 32px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 属性选择器权重是10 */
+        /* 选择具体disabled属性的button元素 */
+        button[disabled] {
+            color: red;
+        }
+        /* 选择具体disabled属性且属性值为disabled的button元素 */
+        button[disabled='disabled'] {
+            color: yellowgreen;
+        }
+        /* 选择具体disabled属性且属性值开头为dis的button元素 */
+        button[disabled^='dis'] {
+            color: blue;
+        }
+        /* 选择具体disabled属性且属性值结尾为led的button元素 */
+        button[disabled$='led'] {
+            color: pink;
+        }
+        /* 选择具体disabled属性且属性值中带有sa的button元素 */
+        button[disabled*='sa'] {
+            color: yellow;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>提交</button>
+    <button>提交</button>
+    <button disabled="disabled">提交</button>
+    <button>提交</button>
+</body>
+</html>
