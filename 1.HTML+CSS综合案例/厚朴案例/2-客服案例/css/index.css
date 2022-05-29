@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+body {
+  width: 400px;
+  margin: 0 auto;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: blue;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 25px;
+}
+header img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+}
+.img img {
+  width: 100%;
+  vertical-align: bottom;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  float: left;
+  width: 20%;
+  height: 90px;
+  background: url(../images/1.png) no-repeat center 10px;
+  background-size: 50px 50px;
+  text-align: center;
+  line-height: 150px;
+}
+article .head {
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 20px;
+}
+article .head img:first-child {
+  position: absolute;
+  width: 30px;
+  top: 10px;
+  left: 10px;
+}
+article .head img:last-child {
+  position: absolute;
+  width: 30px;
+  top: 10px;
+  right: 10px;
+}
+article .head p {
+  padding-left: 70px;
+}
+article section {
+  position: relative;
+  width: 100%;
+}
+article section .left {
+  position: absolute;
+  width: 20%;
+  height: 90px;
+  background-color: pink;
+}
+article section .right {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  height: 90px;
+}
+article section .right .top {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: yellow;
+}
+article section .right .bottom {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  height: 50%;
+  background-color: blue;
+}
