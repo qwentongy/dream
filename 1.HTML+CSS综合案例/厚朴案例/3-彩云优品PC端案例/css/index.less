@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+body {
+    width: 1920px;
+    margin: 0 auto;
+}
+header {
+    .head {
+        height: 560px;
+        background: url(../images/头部.jpg);
+    }
+    section {
+        width: 960px;
+        height: 390px;
+        background-color: pink;
+        margin: 0 auto;
+        border-bottom: 1px solid gray;
+        div {
+            width: 410px;
+            height: 315px;
+            background-color: blue;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+    }
+}
