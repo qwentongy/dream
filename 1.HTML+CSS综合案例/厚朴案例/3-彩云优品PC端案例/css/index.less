@@ -2,39 +2,139 @@
     margin: 0;
     padding: 0;
 }
+
 .clearfix::before,
 .clearfix::after {
     content: "";
     display: table;
 }
+
 .clearfix::after {
     clear: both;
 }
+
 body {
     width: 1920px;
     margin: 0 auto;
 }
+
 header {
     .head {
         height: 560px;
         background: url(../images/头部.jpg);
     }
+
     section {
         width: 960px;
         height: 390px;
-        background-color: pink;
         margin: 0 auto;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid #e6e6e6;
+
         div {
             width: 410px;
             height: 315px;
-            background-color: blue;
+            margin-top: 40px;
         }
-        .left {
+
+        .left,
+        .right {
             float: left;
+            text-align: center;
+
+            h3 {
+                margin: 20px auto;
+                width: 300px;
+                border-bottom: 1px solid #e6e6e6;
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                font-size: 20px;
+                color: #666666;
+            }
         }
+
         .right {
             float: right;
+        }
+    }
+
+    .header-footer {
+        width: 960px;
+        height: 350px;
+        margin: 0 auto;
+        text-align: center;
+
+        h3 {
+            font-size: 30px;
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 50px;
+
+            li {
+                display: inline-block;
+                vertical-align: top;
+
+                p {
+                    margin-top: 35px;
+                    color: #666666;
+                    font-size: 20px;
+                }
+            }
+
+            li {
+                &:nth-child(2n) {
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+}
+article {
+    section {
+        &:first-child {
+            position: relative;
+            height: 660px;
+            background: #fb6161 url(../images/);
+            div {
+                &:first-child {
+                    position: absolute;
+                    top: 0;
+                    left: 476px;
+                    width: 184px;
+                    height: 114px;
+                    background: url(../images/步骤背景.png);
+                    font-size: 36px;
+                    line-height: 28px;
+                    color: #d20d0d;
+                    text-align: center;
+                    line-height: 84px;
+                }
+            }
+            .header {
+                text-align: center;
+                img {
+                    margin-top: 36px;
+                    margin-bottom: 17px;
+                }
+                h3 {
+                    font-size: 30px;
+                    color: #ffffff;
+                }
+                p {
+                    font-size: 20px;
+                    color: #ffe5e5;
+                    margin-top: 19px;
+                    margin-bottom: 50px;
+                }
+            }
+            .body {
+                
+            }
         }
     }
 }
