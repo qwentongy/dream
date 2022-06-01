@@ -95,11 +95,17 @@ header {
     }
 }
 article {
+    position: relative;
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
     section {
         &:first-child {
             position: relative;
             height: 660px;
-            background: #fb6161 url(../images/);
+            background: #fb6161;
             div {
                 &:first-child {
                     position: absolute;
@@ -133,7 +139,30 @@ article {
                 }
             }
             .body {
-                
+                width: 960px;
+                height: 420px;
+                margin: 0 auto;
+                ul {
+                    font-size: 0;
+                    list-style: none;
+                    li {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    li {
+                        &:nth-child(2n) {
+                            margin: 0 32.5px;
+                        }
+                    }
+                    li {
+                        &:nth-child(2n-1) {
+                            img {
+                                width: 250px;
+                                height: 420px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

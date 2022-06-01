@@ -76,10 +76,18 @@ header .header-footer ul li p {
 header .header-footer ul li:nth-child(2n) {
   padding-top: 30px;
 }
+article {
+  position: relative;
+}
+article .bg {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
 article section:first-child {
   position: relative;
   height: 660px;
-  background: #fb6161 url(../images/);
+  background: #fb6161;
 }
 article section:first-child div:first-child {
   position: absolute;
@@ -110,4 +118,24 @@ article section:first-child .header p {
   color: #ffe5e5;
   margin-top: 19px;
   margin-bottom: 50px;
+}
+article section:first-child .body {
+  width: 960px;
+  height: 420px;
+  margin: 0 auto;
+}
+article section:first-child .body ul {
+  font-size: 0;
+  list-style: none;
+}
+article section:first-child .body ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+article section:first-child .body ul li:nth-child(2n) {
+  margin: 0 32.5px;
+}
+article section:first-child .body ul li:nth-child(2n-1) img {
+  width: 250px;
+  height: 420px;
 }
