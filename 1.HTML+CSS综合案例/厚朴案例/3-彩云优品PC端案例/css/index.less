@@ -234,48 +234,74 @@ article {
     }
 
     footer {
-        div {
-            &:nth-child(1) {
-                width: 960px;
-                height: 100px;
-                margin: 0 auto;
-                text-align: center;
-                font-size: 18px;
-                color: #666666;
-                line-height: 100px;
-                border-bottom: 1px solid #e6e6e6;
-            }
-
-            &:last-child {
-                width: 100%;
-                height: 286px;
-                background: url(../images/底部.jpg);
-
-                p {
-                    &:first-child {
-                        // float: left;
-                        // margin-left: 6px;
-                        font-size: 20px;
-                        color: #ffffff;
-                        margin-top: 74px;
-                        width: 580px;
-                        height: 80px;
-                    }
-                }
-            }
-        }
-
-        h3 {
+        .more {
+            width: 960px;
+            height: 18px;
+            margin: 47px auto 0;
+            padding-bottom: 47px;
             text-align: center;
-            margin: 45px;
+            font-size: 18px;
+            color: #666666;
+            border-bottom: 1px solid #e6e6e6;
         }
 
-        p {
+        .footer {
+            width: 960px;
+            color: #333333;
+            text-align: center;
+            margin: 45px auto 33px;
+        }
+
+        .explain {
+            width: 969px;
+            color: #666666;
+            font-size: 20px;
+            line-height: 38px;
             margin: 0 auto;
             text-align: center;
-            line-height: 38px;
-            width: 960px;
-            color: #666666;
+        }
+
+        .contact {
+            width: 100%;
+            height: 286px;
+            background: url(../images/底部.jpg);
+            margin-top: 64px;
+
+            .content {
+                width: 960px;
+                margin: 74px auto 0;
+
+                .text {
+                    float: left;
+                    width: 580px;
+
+                    p {
+                        font-size: 20px;
+                        color: #ffffff;
+                        line-height: 30px;
+                        vertical-align: top;
+
+                        &:last-child {
+                            margin-top: 37px;
+                        }
+                    }
+                }
+
+                .qr {
+                    float: left;
+                    width: 150px;
+                    height: 150px;
+                    vertical-align: top;
+                }
+
+                .qr1 {
+                    margin-left: 53px;
+                }
+
+                .qr2 {
+                    margin-left: 27px;
+                }
+            }
         }
     }
 }
