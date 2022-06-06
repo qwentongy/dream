@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            /* 1、flex-direction 设置主轴的方向 */
+            /* （2） row-reverse 从右到左 */
+            flex-direction: row-reverse;
+            /* （3）column 从上到下 */
+            flex-direction: column;
+            /* （4）column-reverse 从下到上 */
+            flex-direction: column-reverse;
+            /* （1）row 默认值 从左到右 */
+            flex-direction: row;
+            /* 2、justify-content 设置主轴上的子元素排列方式 */
+            /* （1）默认值 从头部开始 如果主轴是x轴 则从左到右 */
+            justify-content: flex-start;
+            /* （2）从尾部开始排列 */
+            justify-content: flex-end;
+            /* （3）在主轴居中对齐（如果主轴是x轴则水平居中） */
+            justify-content: center;
+            /* （4）平分剩余空间 */
+            justify-content: space-around;
+            /* （5）先两边贴边 再平分剩余空间（重要） */
+            justify-content: space-between;
+            /* （6）平分剩余空间 包括两边 */
+            justify-content: space-evenly;
+            /* 3、flex-wrap 设置子元素是否自动换行 */
+            /* flex布局中 默认子元素不换行 如果装不开 会缩小子元素的宽度 放到父元素里面 */
+            /* （1）超出父级宽度换行 */
+            flex-wrap: wrap;
+            /* （2）默认值 超出父级宽度缩小子元素宽度 不换行 */
+            /* 4、align-items 设置侧轴上的子元素排列方式 */
+            /* 该属性是控制子元素在侧轴（默认是y轴）上的排列方式 在子项为单项的时候使用 */
+            
+            flex-wrap: nowrap;
+            width: 500px;
+            height: 800px;
+            background-color: pink;
+        }
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+    </div>
+</body>
+</html>
