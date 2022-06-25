@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,12 +38,33 @@
             /* （2）默认值 超出父级宽度缩小子元素宽度 不换行 */
             /* 4、align-items 设置侧轴上的子元素排列方式 */
             /* 该属性是控制子元素在侧轴（默认是y轴）上的排列方式 在子项为单项的时候使用 */
-            
-            flex-wrap: nowrap;
+            /* （1）垂直居中 */
+            align-items: center;
+            /* （2）从上到下 */
+            align-items: flex-start;
+            /* （3）从下到上 */
+            align-items: flex-end;
+            /* （4）默认值 */
+            align-items: stretch;
+            /* 5、align-content 设置侧轴上的子元素的排列方式（多行） */
+            /* （1）在侧轴的尾部开始排列 */
+            align-content: flex-end;
+            /* （2）在侧轴中间显示 */
+            align-content: center;
+            /* （3）子项在侧轴平分空间 */
+            align-content: space-around;
+            /* （4）子项在侧轴先分布在两头 再平分剩余空间 */
+            align-content: space-between;
+            /* （5）设置子项元素高度平分父元素高度 */
+            align-content: stretch;
+            /* （6）默认值在侧轴的头部开始排列 */
+            align-content: flex-start;
+            flex-wrap: wrap;
             width: 500px;
             height: 800px;
             background-color: pink;
         }
+
         span {
             width: 100px;
             height: 100px;
@@ -52,6 +74,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="box">
         <span>1</span>
@@ -62,4 +85,5 @@
         <span>6</span>
     </div>
 </body>
+
 </html>
