@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 2rem;
+            height: 2rem;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    var html = document.documentElement;
+    console.log(html);
+    html.style.backgroundColor = 'pink';
+    var w = document.documentElement.clientWidth;
+    html.style.fontSize = w / 15 + 'px';
+    function displayWindowWidth() {
+        var w = document.documentElement.clientWidth;
+        html.style.fontSize = w / 15 + 'px';
+        console.log(w);
+    }
+    window.addEventListener('resize',displayWindowWidth);
+</script>
+</html>

@@ -1,0 +1,104 @@
+// 设计稿是750px
+@baseFont:50;
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 50px!important;
+    }
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body {
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    // 顶部搜索
+    .search-content {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: (88rem / @baseFont);
+        background-color: #ffc001;
+        .classify {
+            width: (44rem / @baseFont);
+            height: (70rem / @baseFont);
+            margin: (11rem / @baseFont) (25rem / @baseFont) (7rem / @baseFont) (24rem / @baseFont);
+            background: url(../images/classify.png) no-repeat;
+            background-size: (44rem / @baseFont) auto;
+        }
+        .search {
+            flex: 1;
+            input {
+                width: 100%;
+                border: 0;
+                height: (66rem / @baseFont);
+                border-radius: (33rem / @baseFont);
+                background-color: #fff2cc;
+                margin-top: (12rem / @baseFont);
+                font-size: (25rem / @baseFont);
+                padding-left: (55rem / @baseFont);
+                color: rgb(106, 100, 100);
+            }
+        }
+        .login {
+            width: (75rem / @baseFont);
+            height: (70rem / @baseFont);
+            font-size: (25rem / @baseFont);
+            margin: (10rem / @baseFont);
+            line-height: (70rem / @baseFont);
+            text-align: center;
+        }
+    }
+    // banner 部分
+    .banner {
+        height: (368rem / @baseFont);
+        img {
+            width: (750rem / @baseFont);
+        }
+    }
+    // 广告部分
+    .ad {
+        display: flex;
+        a {
+            flex: 1;
+            img {
+                width: (250rem / @baseFont);
+            }
+        }
+    }
+    // 导航栏
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        li {
+            flex: 20%;
+            height: (140rem / @baseFont);
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: (25rem / @baseFont);
+                color: black;
+                .nav-icon {
+                    width: (82rem / @baseFont);
+                    height: (82rem / @baseFont);
+                    background: url(../upload/nav1.png) no-repeat;
+                    background-size: (82rem / @baseFont) auto;
+                    margin-bottom: (10rem / @baseFont);
+                }
+
+            }
+        }
+    }
+}
