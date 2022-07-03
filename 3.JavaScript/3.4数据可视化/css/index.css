@@ -1,0 +1,48 @@
+body {
+  background: url(../images/bg.jpg) no-repeat 0 0 / cover;
+}
+body .overview {
+  height: 1.375rem;
+}
+body .viewport {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  min-height: 780px;
+  margin: 0 auto;
+  padding: 1.1rem 0.25rem 0;
+  background: url(../images/logo.png) no-repeat 0 0 / contain;
+}
+body .viewport .column {
+  flex: 3;
+  background-color: pink;
+}
+body .viewport .column:nth-child(2) {
+  flex: 4;
+}
+body .viewport .column .panel {
+  position: relative;
+  border: 15px solid transparent;
+  border-width: 0.6375rem 0.3475rem 0.25rem 1.65rem;
+  border-image-source: url(../images/border.png);
+  border-image-slice: 51 38 20 132;
+  margin-bottom: 0.25rem;
+}
+body .viewport .column .panel .inner {
+  position: absolute;
+  top: -0.6375rem;
+  left: -1.65rem;
+  right: -0.475rem;
+  bottom: -0.25rem;
+  padding: 0.3rem 0.45rem;
+  background-color: red;
+}
+body .viewport .column .panel .inner ul li h4 {
+  font-size: 0.35rem;
+  color: #fff;
+  margin: 0 0 0.1rem 0.06rem;
+}
+body .viewport .column .panel .inner ul li span {
+  font-size: 0.2rem;
+  color: #4c9bfd;
+}
