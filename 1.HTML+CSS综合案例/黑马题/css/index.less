@@ -1,0 +1,124 @@
+.main {
+    width: 1226px;
+    margin: 0 auto;
+}
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    ul {
+        li {
+            float: left;
+            font-size: 12px;
+            line-height: 40px;
+            display: inline-block;
+            // padding: 0 8px;
+            a {
+                color: #b0b0b0;
+            }
+            &::after {
+                content: '|';
+                margin: 0 8px;
+                color: #404040;
+            }
+            &:last-child::after {
+                content: '';
+            }
+        }
+    }
+}
+.side-nav {
+    height: 100px;
+    line-height: 100px;
+    .logo {
+        display: inline-block;
+        width: 56px;
+        vertical-align: middle;
+        margin-right: 188px;
+    }
+    ul {
+        display: inline-block;
+        li {
+            display: inline-block;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+    }
+    div {
+        display: flex;
+        width: 245px;
+        height: 50px;
+        border: 1px solid #e0e0e0;
+        margin-top: 25px;
+        line-height: 50px;
+        padding-left: 20px;
+    }
+}
+.car {
+    display: block;
+    padding-top: 26px;
+}
+article {
+    h2 {
+        display: flex;
+        height: 80px;
+        padding-top: 40px;
+        font-size: 22px;
+    }
+    .contain {
+        height: 700px;
+        .left {
+            width: 234px;
+            height: 615px;
+            background-color: #fff;
+            img {
+                width: 100%;
+            }
+        }
+        .right {
+            width: 980px;
+            ul {
+                li {
+                    float: left;
+                    width: 234px;
+                    height: 300px;
+                    margin-right: 14px;
+                    text-align: center;
+                    background-color: #fff;
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
+                    &:nth-child(-n + 4) {
+                        margin-bottom: 14px;
+                    }
+                    a {
+                        img {
+                            width: 160px;
+                            margin-top: 20px;
+                        }
+                        .name {
+                            display: block;
+                            font-size: 14px;
+                            margin-top: 20px;
+                        }
+                        .des {
+                            display: block;
+                            font-size: 12px;
+                            margin-top: 5px;
+                            color: #b0b0b0;
+                        }
+                        .price {
+                            display: block;
+                            font-size: 14px;
+                            margin-top: 16px;
+                            color: #ffceae;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.box {
+    background-color: #f5f5f5;
+}

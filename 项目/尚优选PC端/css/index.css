@@ -1,0 +1,20 @@
+.wrapper header .headTop {
+  background: #eaeaea;
+  height: 30px;
+  line-height: 30px;
+}
+.wrapper header .headTop .headTopMain {
+  width: 1200px;
+  margin: 0 auto;
+}
+.wrapper header .headTop .headTopMain .left h5 {
+  float: left;
+}
+.wrapper header .headTop .headTopMain .left p {
+  float: left;
+  margin-left: 5px;
+  font-size: 14px;
+}
+.wrapper header .headTop .headTopMain .left p a:first-child {
+  border-right: 1px solid #b3aeab;
+}

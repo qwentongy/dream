@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .right {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="uname"> <span>请输入用户名</span>
+    <script>
+        // 1.利用 RegExp 对象来创建正则表达式
+        var regexp = new RegExp(/123/);
+        console.log(regexp);
+
+        // 2.利用字面量创建正则表达式
+        var rg = /123/;
+        console.log(rg);
+
+        // 3.test方法用来检测字符串是否符合正则表达式要求的规范
+        console.log(rg.test('abc'));
+        console.log(rg.test(123));
+
+        // /abc/ 只要包含abc就可以
+        // /[abc]/ 只要包含了a或b或c其中一个就可以
+        // /^[abc]$/ 三选一才返回true
+        // /^[a-z]$/ 26个小写英文字母选一才返回true
+        // /^[a-zA-Z]$/ 大小写英文字母选一才返回true
+        // /^[a-zA-Z0-9]$/ 大小写英文字母和数字选一才返回true
+        // /^[^a-z]$/ 中括号里的^表示取反
+        // /^[a-zA-Z0-9_-]{6,16}$/ 这个模式用户只能输入英文字母 数字 下划线 短横线但是有边界符[] 这就限定了只能多选一
+
+        // 中括号 字符集合 匹配放阔号中的任意字符
+        // 大括号 量词符 里面表示重复次数
+        // 小括号 表示优先级
+
+        // 预定义类
+        // \d 匹配0-9之间的任意数字，相当于[0-9]
+        // \D 匹配所有0-9以外的字符，相当于^[0-9]
+        // \w 匹配任意的字母、数字和下划线，相当于[A-Za-z0-9_]
+        // \W \w取反
+        // \s 匹配空格（包括换行符、制表符、空格符等），相当于[\t\r\n\v\f]
+        // \S \s取反
+
+        var uname = document.querySelector('.uname');
+        var span = document.querySelector('span');
+        var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+        uname.addEventListener('blur',function() {
+            if (reg.test(uname.value)) {
+                span.className = 'right';
+                span.innerHTML = '用户名格式正确';
+            } else {
+                span.className = 'wrong';
+                span.innerHTML = '用户名格式错误';
+            }
+        })
+
+    </script>
+</body>
+</html>
